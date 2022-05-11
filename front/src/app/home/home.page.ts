@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {Router} from '@angular/router';
+
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,19 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+    public router: Router  
+    ) {}
   
+  GoToLogin(){
+    this.router.navigate(['/login'])
+  }
+
+  GoToAccount(){
+    this.router.navigate(['/account'])
+  }
+
+  GoToHome(){
+    this.router.navigate(['/home'])
+  }
 }
