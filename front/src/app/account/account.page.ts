@@ -18,7 +18,7 @@ export class AccountPage implements OnInit {
   GoToHome(){
     this.router.navigate(['/home'])
   }
-
+  
   GoToChangePassword(){
     this.router.navigate(['/change-password'])
   }
