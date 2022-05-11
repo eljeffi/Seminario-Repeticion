@@ -1,0 +1,30 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>LOGIN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-card>
+    <img src="" />
+    <ion-card-header>
+      <ion-card-title>Bienvenido usuario</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="Login">
+      <ion-item>
+        <ion-label position="stacked">USUARIO</ion-label>
+        <ion-input placeholder="Ingrese su usuario..."></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">CONTRASEÑA</ion-label>
+        <ion-input placeholder="Ingrese su contraseña..." type="password"></ion-input>
+      </ion-item>
+      <section class="full-width">
+        <ion-button expand="full" color="primary" (click)="GoToHome()">INICIAR SESION</ion-button>
+      </section>
+      <section class="full-width">
+        <ion-button expand="full" color="tertiary" (click)="GoToRegister()">REGISTRARSE</ion-button>
+      </section>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>REGISTRARSE</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-card>
+    <img src="" />
+    <ion-card-header>
+      <ion-card-title>Rellena los campos para regsitrar un nuevo usuario</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="Register">
+      <ion-item>
+        <ion-label position="stacked">NOMBRE</ion-label>
+        <ion-input placeholder="Ingrese su Nombre..." required="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">CEDULA</ion-label>
+        <ion-input placeholder="Ingrese su Cedula..." type="number" required="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">CELULAR</ion-label>
+        <ion-input placeholder="Ingrese su numero de celular..." type="number" required="true"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">CLAVE</ion-label>
+        <ion-input placeholder="Ingrese su contraseña..." type="password" required="true"></ion-input>
+      </ion-item>
+      <section class="full-width">
+        <ion-button expand="full" color="tertiary" (click)="GoToLogin()">REGISTRARSE</ion-button>
+      </section>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
