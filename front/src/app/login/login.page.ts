@@ -13,7 +13,7 @@ export class LoginPage implements OnInit {
   }
 
   GoToHome(){
-     this.router.navigate(['/home'])
+    this.router.navigate(['/home'])
   }
   GoToRegister(){
     this.router.navigate(['/register'])
