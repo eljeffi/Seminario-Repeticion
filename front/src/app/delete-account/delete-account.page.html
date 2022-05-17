@@ -4,6 +4,23 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen>
+  <ion-card>
+    <img src="" />
+    <ion-card-header>
+      <ion-card-title>Ingresar cedula para eliminar cuenta</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="Register">
 
+      <ion-item>
+        <ion-label position="stacked">CEDULA</ion-label>
+        <ion-input placeholder="Ingrese su Cedula..." type="number" required="true"></ion-input>
+      </ion-item>
+      
+      <section class="full-width">
+        <ion-button expand="full" color="tertiary" (click)="GoToAccount()">eliminar</ion-button>
+      </section>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
+

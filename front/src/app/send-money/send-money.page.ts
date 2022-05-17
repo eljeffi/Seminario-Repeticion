@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-@Component({
-  selector: 'app-account',
-  templateUrl: './account.page.html',
-  styleUrls: ['./account.page.scss'],
-})
-export class AccountPage implements OnInit {
 
-  constructor(public router: Router) { }
+@Component({
+  selector: 'app-send-money',
+  templateUrl: './send-money.page.html',
+  styleUrls: ['./send-money.page.scss'],
+})
+export class SendMoneyPage implements OnInit {
+
+  constructor(public router : Router) { }
 
   ngOnInit() {
   }
@@ -32,6 +33,5 @@ export class AccountPage implements OnInit {
 
   GoToSendMoney(){
     this.router.navigate(['/send-money'])
-    
   }
 }

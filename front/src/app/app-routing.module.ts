@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'delete-account',
     loadChildren: () => import('./delete-account/delete-account.module').then( m => m.DeleteAccountPageModule)
   },
+  {
+    path: 'send-money',
+    loadChildren: () => import('./send-money/send-money.module').then( m => m.SendMoneyPageModule)
+  },
 ];
 
 @NgModule({
