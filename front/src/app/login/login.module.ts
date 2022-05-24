@@ -8,6 +8,8 @@ import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
 
+import { HttpService } from '../services/http.service';
+
 @NgModule({
   imports: [
     CommonModule,

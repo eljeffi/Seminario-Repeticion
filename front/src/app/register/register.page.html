@@ -13,22 +13,18 @@
     <ion-card-content class="Register">
       <ion-item>
         <ion-label position="stacked">NOMBRE</ion-label>
-        <ion-input placeholder="Ingrese su Nombre..." required="true"></ion-input>
-      </ion-item>
-      <ion-item>
-        <ion-label position="stacked">CEDULA</ion-label>
-        <ion-input placeholder="Ingrese su Cedula..." type="number" required="true"></ion-input>
+        <ion-input #nombre placeholder="Ingrese su Nombre..." required="true"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">CELULAR</ion-label>
-        <ion-input placeholder="Ingrese su numero de celular..." type="number" required="true"></ion-input>
+        <ion-input #celular placeholder="Ingrese su numero de celular..." type="number" required="true"></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">CLAVE</ion-label>
-        <ion-input placeholder="Ingrese su contraseña..." type="password" required="true"></ion-input>
+        <ion-input #clave placeholder="Ingrese su contraseña..." type="password" required="true"></ion-input>
       </ion-item>
       <section class="full-width">
-        <ion-button expand="full" color="tertiary" (click)="GoToLogin()">REGISTRARSE</ion-button>
+        <ion-button expand="full" color="tertiary" (click)="post(nombre.value, clave.value, celular.value)" >REGISTRARSE</ion-button>
       </section>
       <section class="full-width">
         <ion-button expand="full" color="primary" (click)="GoToLogin()">VOLVER ATRAS</ion-button>
