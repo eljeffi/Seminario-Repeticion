@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+import { HttpService } from '../services/http.service';
 
 @Component({
   selector: 'app-send-money',
@@ -8,10 +9,19 @@ import {Router} from '@angular/router';
 })
 export class SendMoneyPage implements OnInit {
 
-  constructor(public router : Router) { }
+  constructor(public router : Router, private http: HttpService) { }
 
   ngOnInit() {
   }
+
+  postRetiros(cuentaorigen:string, cuentadestino:string, monto:string) {
+    console.log(cuentaorigen,cuentadestino,monto)
+    this.http.sendMoney(cuentaorigen,cuentadestino,monto).then(res=>{
+      console.log(res);
+  })
+    this.GoToHome();
+  }
+
   GoToLogin(){
     this.router.navigate(['/login'])
   }

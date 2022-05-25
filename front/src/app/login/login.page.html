@@ -14,15 +14,15 @@
     </ion-card-header>
     <ion-card-content class="Login">
       <ion-item>
-        <ion-label position="stacked">USUARIO</ion-label>
-        <ion-input placeholder="Ingrese su usuario..."></ion-input>
+        <ion-label position="stacked">CELULAR</ion-label>
+        <ion-input #celular placeholder="Ingrese su numero de celular..."></ion-input>
       </ion-item>
       <ion-item>
         <ion-label position="stacked">CONTRASEÑA</ion-label>
-        <ion-input placeholder="Ingrese su contraseña..." type="password"></ion-input>
+        <ion-input #clave placeholder="Ingrese su contraseña..." type="password"></ion-input>
       </ion-item>
       <section class="full-width">
-        <ion-button expand="full" color="primary" (click)="GoToHome()">INICIAR SESION</ion-button>
+        <ion-button expand="full" color="primary" (click)="Validar(celular.value, clave.value)">INICIAR SESION</ion-button>
       </section>
       <section class="full-width">
         <ion-button expand="full" color="tertiary" (click)="GoToRegister()">REGISTRARSE</ion-button>

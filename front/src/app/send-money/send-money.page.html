@@ -48,22 +48,22 @@
       <ion-card>
         <img src="" />
         <ion-card-header>
-          <ion-card-title>Ingresar cedula para eliminar cuenta</ion-card-title>
+          <ion-card-title>Ingrese celular y monto a enviar</ion-card-title>
         </ion-card-header>
         <ion-card-content class="Register">
     
           <ion-item>
             <ion-label position="stacked">ingrese numero de celular</ion-label>
-            <ion-input placeholder="Ingrese celular..." type="number" required="true"></ion-input>
+            <ion-input #celulardestino placeholder="Ingrese celular..." type="number" required="true"></ion-input>
           </ion-item>
           
           <ion-item>
             <ion-label position="stacked">Cantidad de dinero a enviar</ion-label>
-            <ion-input placeholder="Ingrese cantidad..." type="number" required="true"></ion-input>
+            <ion-input #monto placeholder="Monto ..." type="number" required="true"></ion-input>
           </ion-item>
     
           <section class="full-width">
-            <ion-button expand="full" color="tertiary" (click)="GoToHome()">enviar</ion-button>
+            <ion-button expand="full" color="tertiary" (click)="postRetiros(3001234567, celulardestino.value, monto.value)">enviar</ion-button>
           </section>
         </ion-card-content>
       </ion-card>

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
-
+import { HttpService } from '../services/http.service';
 
 
 @Component({
@@ -9,11 +9,22 @@ import {Router} from '@angular/router';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-
+  
   constructor(
-    public router: Router  
+    public router: Router,
+    private http: HttpService  
     ) {}
   
+
+  ngOnInit() {
+    this.cargarDatos();
+    
+  }
+
+  cargarDatos(){
+    
+  }
+
   GoToLogin(){
     this.router.navigate(['/login'])
   }
@@ -25,7 +36,11 @@ export class HomePage {
   GoToHome(){
     this.router.navigate(['/home'])
   }
+
   GoToSendMoney(){
     this.router.navigate(['/send-money'])
   }
+
+  
+
 }
