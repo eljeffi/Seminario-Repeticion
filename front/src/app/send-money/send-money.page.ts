@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { HttpService } from '../services/http.service';
 
 @Component({
@@ -8,15 +8,17 @@ import { HttpService } from '../services/http.service';
   styleUrls: ['./send-money.page.scss'],
 })
 export class SendMoneyPage implements OnInit {
-
-  constructor(public router : Router, private http: HttpService) { }
+  sesion: any;
+  constructor(public router : Router, private http: HttpService, public activedrouter: ActivatedRoute ) { }
 
   ngOnInit() {
+    this.sesion = this.activedrouter.snapshot.params
+    console.log(this.sesion)
   }
 
-  postRetiros(cuentaorigen:string, cuentadestino:string, monto:string) {
-    console.log(cuentaorigen,cuentadestino,monto)
-    this.http.sendMoney(cuentaorigen,cuentadestino,monto).then(res=>{
+  postRetiros(cuentadestino:string, monto:string) {
+    console.log(this.sesion.celular,cuentadestino,monto)
+    this.http.sendMoney(this.sesion.celular,cuentadestino,monto).then(res=>{
       console.log(res);
   })
     this.GoToHome();
@@ -26,7 +28,7 @@ export class SendMoneyPage implements OnInit {
     this.router.navigate(['/login'])
   }
   GoToHome(){
-    this.router.navigate(['/home'])
+    this.router.navigate(['/home',this.sesion])
   }
 
   GoToChangePassword(){

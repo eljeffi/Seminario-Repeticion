@@ -11,7 +11,7 @@ export class HttpService {
   //GET USUARIO
   loadUsers() {
     return this.http
-    .get('http://localhost:3000/usuarios').toPromise();
+    .get('http://localhost:3001/usuarios').toPromise();
   }
 
   //POST RETIRO
@@ -28,7 +28,7 @@ export class HttpService {
        }
      };
      
-    const url = 'http://localhost:3000/retiros';
+    const url = 'http://localhost:3001/retiros';
   
     return this.http.post(url, JSON.stringify(datos), options).toPromise();
   }
@@ -48,7 +48,7 @@ export class HttpService {
        }
      };
      
-    const url = 'http://localhost:3000/usuarios';
+    const url = 'http://localhost:3001/usuarios';
   
     return this.http.post(url, JSON.stringify(datos), options).toPromise();
   }

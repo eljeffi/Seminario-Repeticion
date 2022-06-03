@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Router} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import { HttpService } from '../services/http.service';
 
 
@@ -9,21 +9,21 @@ import { HttpService } from '../services/http.service';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
-  
+  sesion: any;
   constructor(
     public router: Router,
-    private http: HttpService  
-    ) {}
+    private http: HttpService,
+    public activedrouter: ActivatedRoute  
+    ) {
+      
+    }
   
 
   ngOnInit() {
-    this.cargarDatos();
-    
+    this.sesion = this.activedrouter.snapshot.params
+    console.log(this.sesion)
   }
 
-  cargarDatos(){
-    
-  }
 
   GoToLogin(){
     this.router.navigate(['/login'])
@@ -34,11 +34,16 @@ export class HomePage {
   }
 
   GoToHome(){
-    this.router.navigate(['/home'])
+    console.log("entro "+this.sesion)
+    this.router.navigate(['/home', this.sesion])
   }
 
   GoToSendMoney(){
-    this.router.navigate(['/send-money'])
+    this.router.navigate(['/send-money', this.sesion])
+  }
+
+  GoToDeposito(){
+    this.router.navigate(['/deposito', this.sesion])
   }
 
   

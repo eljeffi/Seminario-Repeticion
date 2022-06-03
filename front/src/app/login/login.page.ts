@@ -33,17 +33,16 @@ export class LoginPage implements OnInit {
     }
     if(entro){
       console.log("CREDENCIALES CORRECTA")
-      this.GoToHome();
+      this.GoToHome(this.sesion);
     }else{
       console.log("NO EXISTE O INCORRECTO")
     }
     
   }
 
-  GoToHome(){
-    console.log(this.sesion)
-    
-    this.router.navigate(['/home/'])
+  GoToHome(sesion:any){
+        
+    this.router.navigate(['/home/',sesion])
   }
   GoToRegister(){
     this.router.navigate(['/register'])

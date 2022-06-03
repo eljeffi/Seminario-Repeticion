@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'send-money',
     loadChildren: () => import('./send-money/send-money.module').then( m => m.SendMoneyPageModule)
   },
+  {
+    path: 'deposito',
+    loadChildren: () => import('./deposito/deposito.module').then( m => m.DepositoPageModule)
+  },
 ];
 
 @NgModule({
