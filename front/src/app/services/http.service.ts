@@ -5,13 +5,13 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class HttpService {
-
+  
   constructor(public http: HttpClient) { }
-
+  
+  port = 3000;
   //GET USUARIO
   loadUsers() {
-    return this.http
-    .get('http://localhost:3001/usuarios').toPromise();
+    return this.http.get(`http://localhost:${this.port}/usuarios`).toPromise();
   }
 
   //POST RETIRO
@@ -28,7 +28,7 @@ export class HttpService {
        }
      };
      
-    const url = 'http://localhost:3001/retiros';
+    const url = `http://localhost:${this.port}/retiros`;
   
     return this.http.post(url, JSON.stringify(datos), options).toPromise();
   }
@@ -48,7 +48,7 @@ export class HttpService {
        }
      };
      
-    const url = 'http://localhost:3001/usuarios';
+    const url = `http://localhost:${this.port}/usuarios`;
   
     return this.http.post(url, JSON.stringify(datos), options).toPromise();
   }
