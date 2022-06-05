@@ -32,6 +32,7 @@ export class LoginPage implements OnInit {
     }
     if(entro){
       console.log("CREDENCIALES CORRECTA")
+      localStorage.setItem("usuario", JSON.stringify(this.sesion))
       this.GoToHome(this.sesion);
     }else{
       console.log("NO EXISTE O INCORRECTO")
@@ -43,6 +44,7 @@ export class LoginPage implements OnInit {
         
     this.router.navigate(['/home/',sesion])
   }
+  
   GoToRegister(){
     this.router.navigate(['/register'])
   }

@@ -20,7 +20,7 @@ export class HomePage {
   
 
   ngOnInit() {
-    this.sesion = this.activedrouter.snapshot.params
+    this.sesion = JSON.parse(localStorage.getItem("usuario"))
     console.log(this.sesion)
   }
 

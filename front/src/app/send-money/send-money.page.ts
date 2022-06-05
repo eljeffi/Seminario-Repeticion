@@ -9,6 +9,8 @@ import { HttpService } from '../services/http.service';
 })
 export class SendMoneyPage implements OnInit {
   sesion: any;
+  monto: any;
+  cuentadestino: any;
   constructor(public router : Router, private http: HttpService, public activedrouter: ActivatedRoute ) { }
 
   ngOnInit() {
@@ -16,12 +18,15 @@ export class SendMoneyPage implements OnInit {
     console.log(this.sesion)
   }
 
-  postRetiros(cuentadestino:string, monto:string) {
-    console.log(this.sesion.celular,cuentadestino,monto)
-    this.http.sendMoney(this.sesion.celular,cuentadestino,monto).then(res=>{
+  postRetiros() {
+    this.sesion = JSON.parse(localStorage.getItem("usuario"))
+    console.log("funciona")
+    /*console.log(this.cuentadestino,this.monto)
+    this.http.sendMoney(this.sesion.celular,this.cuentadestino,this.monto).then(res=>{
       console.log(res);
-  })
-    this.GoToHome();
+      this.GoToHome();
+  })*/
+    
   }
 
   GoToLogin(){
