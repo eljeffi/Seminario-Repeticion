@@ -14,12 +14,13 @@ export class SendMoneyPage implements OnInit {
   constructor(public router : Router, private http: HttpService, public activedrouter: ActivatedRoute ) { }
 
   ngOnInit() {
-    this.sesion = this.activedrouter.snapshot.params
+    this.sesion = JSON.parse(localStorage.getItem("usuario"))
     console.log(this.sesion)
   }
 
   postRetiros() {
     this.sesion = JSON.parse(localStorage.getItem("usuario"))
+    console.log(this.sesion)
     console.log("funciona")
     /*console.log(this.cuentadestino,this.monto)
     this.http.sendMoney(this.sesion.celular,this.cuentadestino,this.monto).then(res=>{
@@ -33,7 +34,7 @@ export class SendMoneyPage implements OnInit {
     this.router.navigate(['/login'])
   }
   GoToHome(){
-    this.router.navigate(['/home',this.sesion])
+    this.router.navigate(['/home'])
   }
 
   GoToChangePassword(){

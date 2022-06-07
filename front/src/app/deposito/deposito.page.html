@@ -7,6 +7,7 @@
       <ion-title>Menu</ion-title>
     </ion-toolbar>
   </ion-header>
+  
   <ion-content>
     <ion-list>
       <ion-item (click)="GoToAccount()">
@@ -42,7 +43,7 @@
       <ion-title>MoneyApp Deposito</ion-title>
     </ion-toolbar>
   </ion-header>
-  <ion-content class="ion-padding">
+  
 
     <ion-content fullscreen>
       <ion-card>
@@ -68,28 +69,8 @@
         </ion-card-content>
       </ion-card>
 
-      <ion-tabs>
-        <ion-tab-bar slot="bottom">
-          <ion-tab-button tab="config">
-            <ion-icon name="settings-outline"></ion-icon>
-            <ion-label>Configuracion</ion-label>
-            
-          </ion-tab-button>
-  
-        <ion-tab-button (click)="GoToHome()">
-            <ion-icon name="home-outline"></ion-icon>
-            <ion-label>Home</ion-label>
-  
-        </ion-tab-button>
-      
-          <ion-tab-button  (click)="GoToLogin()">
-            <ion-icon name="log-out-outline"></ion-icon>
-            <ion-label>Cerrar Sesion</ion-label>
-  
-          </ion-tab-button>
-  
-        </ion-tab-bar>
-      </ion-tabs>
+ 
     </ion-content>
-  </ion-content>
+
+  
 </div>

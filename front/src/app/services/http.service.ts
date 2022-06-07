@@ -14,6 +14,11 @@ export class HttpService {
     return this.http.get(`http://localhost:${this.port}/usuarios`).toPromise();
   }
 
+  //PUT USUARIO
+  actualizarDinero(data:any){
+    
+    return this.http.put(`http://localhost:${this.port}/usuarios/${data.id}`,data).toPromise();
+  }
   //POST RETIRO
   sendMoney(cuentaorigen:string, cuentadestino:string, monto:string){
     const datos = {
@@ -52,4 +57,6 @@ export class HttpService {
   
     return this.http.post(url, JSON.stringify(datos), options).toPromise();
   }
+
+
 }

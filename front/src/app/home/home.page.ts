@@ -34,16 +34,16 @@ export class HomePage {
   }
 
   GoToHome(){
-    console.log("entro "+this.sesion)
-    this.router.navigate(['/home', this.sesion])
+    
+    this.router.navigate(['/home'])
   }
 
   GoToSendMoney(){
-    this.router.navigate(['/send-money', this.sesion])
+    this.router.navigate(['/send-money'])
   }
 
   GoToDeposito(){
-    this.router.navigate(['/deposito', this.sesion])
+    this.router.navigate(['/deposito'])
   }
 
   

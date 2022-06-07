@@ -42,7 +42,7 @@ export class LoginPage implements OnInit {
 
   GoToHome(sesion:any){
         
-    this.router.navigate(['/home/',sesion])
+    this.router.navigate(['/home/'])
   }
   
   GoToRegister(){
