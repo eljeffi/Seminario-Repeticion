@@ -22,8 +22,13 @@ export class HomePage {
   ngOnInit() {
     this.sesion = JSON.parse(localStorage.getItem("usuario"))
     console.log(this.sesion)
+    
   }
 
+  reload(){
+    console.log("Se recarga");
+    window.location.reload();  
+  }
 
   GoToLogin(){
     this.router.navigate(['/login'])
@@ -34,7 +39,6 @@ export class HomePage {
   }
 
   GoToHome(){
-    
     this.router.navigate(['/home'])
   }
 

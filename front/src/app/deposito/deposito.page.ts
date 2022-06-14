@@ -33,7 +33,9 @@ export class DepositoPage implements OnInit {
         console.log("Se actualizó", res)
         this.sesion.saldo = data.saldo
         localStorage.setItem("usuario", JSON.stringify(this.sesion))
-        this.router.navigate(['/home'])
+        this.router.navigate(['/home']).then(() => {
+          window.location.reload();
+        });
       },
       (error) =>{
         console.error(error);
